@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="InputRange">        
+        <t t-if="widget.mode == 'readonly'">            
+            <input 
+                type="range" 
+                t-att-min ="widget.min" 
+                t-att-max ="widget.max" 
+                t-att-value ="widget.value" 
+                class="range_slider none_pointer" 
+                id="myRange"                
+            />
+            <output for="myRange" id="rangeValue"></output>
+            
+        </t> 
+        <t t-if="widget.mode !== 'readonly'">
+            <div class="range_slidecontainer">
+                <input 
+                    type="range" 
+                    t-att-min ="widget.min" 
+                    t-att-max ="widget.max" 
+                    t-att-value ="widget.value" 
+                    class="range_slider" 
+                    id="myRange"
+                />
+                <output for="myRange" id="rangeValue"><t t-esc="widget.value"/></output>
+            </div>
+        </t>
+    </t>
+</templates>

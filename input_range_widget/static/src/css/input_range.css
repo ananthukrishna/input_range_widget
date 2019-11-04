@@ -1,0 +1,106 @@
+.range_slidecontainer {
+width: 100%;
+}
+.range_slidecontainer input,output{
+    display: inline-block;
+}
+.range_slider {
+    outline: 0;
+    border: 0;
+    border-radius: 500px;
+    width: 100%;    
+    max-width: 100%;
+    margin: 0px 0;
+    transition: box-shadow 0.2s ease-in-out;    
+    border: 2px solid #ccc;
+    padding: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .range_slider {
+        overflow: hidden;
+        height: 34px;
+        -webkit-appearance: none;
+        background-color: #ddd;
+    }
+    .range_slider::-webkit-slider-runnable-track {
+        height: 30px;
+        -webkit-appearance: none;
+        color: #444;
+        margin-top: -1px;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+    .range_slider::-webkit-slider-thumb {
+        width: 30px;
+        -webkit-appearance: none;
+        height: 30px;
+        cursor: ew-resize;
+        background: #fff;
+        box-shadow: -1140px 0 0 1120px #1597ff, inset 0 0 0 0px #1597ff;
+        border-radius: 50%;
+        transition: box-shadow 0.2s ease-in-out;
+        position: relative;
+    }
+}
+/* Firefox */
+.range_slider::-moz-range-thumb {
+    width: 30px;
+    -webkit-appearance: none;
+    height: 30px;
+    cursor: ew-resize;
+    background: #fff;
+    box-shadow: -1140px 0 0 1120px #1597ff, inset 0 0 0 0px #1597ff;
+    border-radius: 50%;
+    transition: box-shadow 0.2s ease-in-out;
+    position: relative;
+}
+.range_slider::-moz-range-track {  
+    background-color: #ddd;
+    height: 30px;
+}
+
+/* IE */
+.range_slider::-ms-track{
+    border-color: transparent;
+    height: 30px !important;
+    width:100% !important;
+    color: transparent;    
+}
+.range_slider::-ms-thumb{
+    width: 30px;    
+    height: 30px;
+    cursor: ew-resize;
+    background: #fff;
+    box-shadow: -1140px 0 0 1120px #1597ff, inset 0 0 0 0px #1597ff;
+    border-radius: 50%;
+    transition: box-shadow 0.2s ease-in-out;
+    border: none !important;
+}
+.range_slider::-ms-ticks{
+    background: #fff;
+    border: none !important;
+}
+.range_slider::-ms-fill-lower {
+    background: transparent;
+}
+.range_slider::-ms-fill-upper {  
+    background: #ddd;
+}
+.range_slider::-ms-tooltip{
+    display: none !important;
+}
+
+
+
+.none_pointer {
+    pointer-events: none;
+}
+#rangeValue{
+    text-align: center !important;
+    color: #999;
+    font-weight: 500;
+    width: 100%;
+}
+#rangeValue:after {
+    content: "%";
+    padding-left: 1px;
+}

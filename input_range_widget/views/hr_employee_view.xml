@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_employee_form_inherit_ninebox" model="ir.ui.view">
+        <field name="name">hr.employee</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='public']" position="inside">
+                <group>
+                    <field name="input_range" widget="input_range" options="{'min':0,'max':100}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
