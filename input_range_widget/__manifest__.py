@@ -47,7 +47,7 @@
         </group>
             
     """,
-    'author': 'Ananthu Krishna',
+    'author': 'CodersFort',
     'maintainer': 'Ananthu Krishna',
     'website': 'http://codersfort.com',
     'license': 'AGPL-3',
